@@ -1,5 +1,10 @@
 <?php
 
+require_once(__DIR__ . '../../vendor/autoload.php');
+
+
+$dotenv = Dotenv\Dotenv::createImmutable('../');
+$dotenv->load();
 
 class DB {
     private $host;
@@ -10,12 +15,12 @@ class DB {
         private $port;
 
     public function __construct(){
-        $this->host = 'sql5.freemysqlhosting.net';
-        $this->db = 'sql5438734';
-        $this->user = 'sql5438734';
-        $this->password = "S45e6r8gVK";
+        $this->host = getenv("host");
+        $this->db = getenv("db");
+        $this->user = getenv("user");
+        $this->password = getenv("password");
         $this->charset = 'utf8mb4';
-                $this->port = '3306';
+                $this->port = getenv("port");
     }
 
     public function connect(){
@@ -33,5 +38,7 @@ class DB {
         }
     }
 }
+
+echo $host;
 
 ?>
