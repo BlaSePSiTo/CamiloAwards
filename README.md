@@ -1,5 +1,9 @@
 # CamiloAwards
 
-Este es un proyecto escolar donde el proposito es sacar un ganador en un concurso
+Es un proyecto escolar Front y Back end
 
 **POR AHORA**
+
+-Conexión a base de datos sql
+-index.html y style.css nav creada
+-sistema de encuestas creado
