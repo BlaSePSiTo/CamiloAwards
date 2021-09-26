@@ -15,12 +15,7 @@ class DB {
         private $port;
 
     public function __construct(){
-        $this->host = getenv("host");
-        $this->db = getenv("db");
-        $this->user = getenv("user");
-        $this->password = getenv("password");
-        $this->charset = 'utf8mb4';
-                $this->port = getenv("port");
+
     }
 
     public function connect(){
